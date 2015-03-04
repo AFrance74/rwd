@@ -5,7 +5,7 @@ body {
 
 /* LAYOUT */
 .container {
-	background: red;
+	background: yellow;
 	margin: 0 auto;
 	width: 90%;
 }
