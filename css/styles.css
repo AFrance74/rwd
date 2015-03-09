@@ -3,9 +3,13 @@ body {
 	background: url("../img/bg.png");
 }
 
+nav li{
+	list-style: none;
+}
+
 /* LAYOUT */
 .container {
-	background: yellow;
+	background: transparent;
 	margin: 0 auto;
 	width: 90%;
 }
@@ -17,16 +21,43 @@ article section {
 }
 
 /* Adpative Content */
-iframe, img {
+iframe,
+img {
 	max-width: 100%;
 	width: 100%;
 }
 
 /* Desktop Query */
 @media (min-width: 960px ) {
-
 	#home {
 		width: 300px;
 	}
+	#youtube-big {
+		/*width: 420px;*/
+		display: none;
+	}
 
+	#youtube-med {
+		display: block;
+	}
+}
+
+/* Tablet Query */
+@media (min-width: 768px ) {
+	#youtube-big {
+		/*width: 420px;*/
+		display: block;
+	}
+
+	#youtube-med {
+		display: none;
+	}
+}
+
+/* Mobile Query */
+@media (min-width: 480px ) {
+	article section {
+		float: none;
+		width: 100%;
+	}
 }
