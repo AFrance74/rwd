@@ -3,9 +3,37 @@ body {
 	background: url("../img/bg.png");
 }
 
-nav li{
-	list-style: none;
+header {
+	min-height: 275px;
+	background: #fff;
 }
+
+nav li,
+#return {
+	text-decoration: none;
+	list-style: none;
+	display: block;
+	/*height: 50px;
+	width: 100px;*/
+	padding-top: 20px;
+	background: lightgray;
+	border: 2px solid rgba(33, 68, 72, 0.59);
+	border-radius: 15%;
+	color: rgba(0, 0, 0, 0.55);
+    text-align: center;
+}
+
+li:link {
+	text-decoration: none;
+}
+li:visited {}
+li:focus {}
+li:hover {
+
+	transform: scale(1.15);	
+}
+li:active {}
+
 
 /* LAYOUT */
 .container {
@@ -14,14 +42,15 @@ nav li{
 	width: 90%;
 }
 
-article section {
-	float: left;
-	padding: 2%;
-	width: 46%;
-}
+
 
 /* Adpative Content */
-iframe,
+iframe {
+	max-width: 100%;
+	width: 100%;
+	/*margin: 0 40%;*/
+}
+
 img {
 	max-width: 100%;
 	width: 100%;
@@ -30,34 +59,46 @@ img {
 /* Desktop Query */
 @media (min-width: 960px ) {
 	#home {
-		width: 300px;
+		max-width: 300px;
+		float: left;
+		margin: 0 50px 0 0;
 	}
-	#youtube-big {
-		/*width: 420px;*/
-		display: none;
+	nav ul {
+		float: left;
+		margin: 15px 10px 0 10px;
 	}
 
-	#youtube-med {
-		display: block;
+	article section {
+	float: left;
+	padding: 2%;
+	width: 46%;
 	}
 }
 
 /* Tablet Query */
 @media (min-width: 768px ) {
-	#youtube-big {
-		/*width: 420px;*/
-		display: block;
-	}
-
-	#youtube-med {
-		display: none;
+	#home {
+		max-height: 260px;
+		max-width: 260px;
+		margin: 0 36%;
 	}
 }
+
+
 
 /* Mobile Query */
 @media (min-width: 480px ) {
-	article section {
+	section {
+		display: block;
 		float: none;
 		width: 100%;
 	}
+	nav {
+		float: none;
+	}
+	nav li {
+		display: inline-block;
+		width: 90%;
+	}
 }
+
