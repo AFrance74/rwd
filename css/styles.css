@@ -8,32 +8,78 @@ header {
 	background: #fff;
 }
 
+#home {
+	-webkit-animation: spin 3s 1s infinite linear;
+	-moz-animation: spin 3s 1s infinite linear;
+	animation: spin 3s 1s infinite linear;
+}
+
+
 nav li,
 #return {
-	text-decoration: none;
 	list-style: none;
 	display: block;
-	/*height: 50px;
-	width: 100px;*/
+	height: 30px;
+	width: 100px;
 	padding-top: 20px;
 	background: lightgray;
 	border: 2px solid rgba(33, 68, 72, 0.59);
 	border-radius: 15%;
 	color: rgba(0, 0, 0, 0.55);
     text-align: center;
+    background: -webkit-linear-gradient(top, #34696f, #2f5f63);
+    background: -moz-linear-gradient(top, #34696f, #2f5f63);
+    background: linear-gradient(top, #34696f, #2f5f63);
+     
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    border-radius: 50px; 
+    -webkit-box-shadow: 0 8px 0 #1b383b;
+    -moz-box-shadow: 0 8px 0 #1b383b;
+    box-shadow: 0 8px 0 #1b383b; 
+    text-shadow: 0 2px 2px rgba(255, 255, 255, 0.2);
 }
 
-li:link {
+a {
 	text-decoration: none;
+	color: teal;
 }
-li:visited {}
-li:focus {}
-li:hover {
+/*nav li:link {
+	text-decoration: none;
+	color: teal;
+}
+nav li:visited {
+	color: red;
+}
 
+nav li:focus {
+	background: violet;
 	transform: scale(1.15);	
+	transition-property: background;
+}*/
+nav li:hover {
+	background: violet;
+	transform: scale(1.15);	
+	transition-property: background;
 }
-li:active {}
 
+nav li:active {
+	background: violet;
+	transform: scale(1.15);	
+	transition-property: background;
+}
+
+
+/* ANIMATIONS */
+
+@-webkit-keyframes spin {
+  from { transform: scale(1) rotate(0deg) ; }
+  to   { transform: scale(2) rotate(360deg) ; }
+}
+@keyframes spin {
+  from { transform: scale(1) rotate(0deg) ; }
+  to   { transform: scale(2) rotate(360deg) ; }
+}
 
 /* LAYOUT */
 .container {
@@ -65,7 +111,17 @@ img {
 	}
 	nav ul {
 		float: left;
-		margin: 15px 10px 0 10px;
+		margin: 110px 10px 0 10px;
+	}
+
+	nav li {
+		display: block;
+		padding-top: 20px;
+		margin-left: 86px;
+		border: 2px solid rgba(33, 68, 72, 0.59);
+		border-radius: 15%;
+		color: rgba(0, 0, 0, 0.55);
+	    text-align: center;
 	}
 
 	article section {
@@ -78,16 +134,20 @@ img {
 /* Tablet Query */
 @media (min-width: 768px ) {
 	#home {
+		float: left;
 		max-height: 260px;
 		max-width: 260px;
-		margin: 0 36%;
+	}
+	nav li {
+		float: right;
+		margin: ;
 	}
 }
 
 
 
 /* Mobile Query */
-@media (min-width: 480px ) {
+@media (min-width: 480px ) and (max-width: 767px) {
 	section {
 		display: block;
 		float: none;
