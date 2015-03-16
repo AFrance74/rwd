@@ -9,9 +9,9 @@ header {
 }
 
 #home {
-	-webkit-animation: spin 3s 1s infinite linear;
-	-moz-animation: spin 3s 1s infinite linear;
-	animation: spin 3s 1s infinite linear;
+	-webkit-animation: spin 3s 1s 10 linear;
+	-moz-animation: spin 3s 1s 10 linear;
+	animation: spin 3s 1s 10 linear;
 }
 
 
